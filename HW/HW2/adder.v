@@ -11,20 +11,20 @@ input a, b, carryin;
 wire not_a, not_b, not_c;
 wire a_b_c, n_a_b_n_c, n_a_n_b_c, a_n_b_n_c, b_c, a_b_n_c, a_n_b_c;
 
-not notA(not_a, a);
-not notB(not_b, b);
-not notC(not_c, carryin);
+not #50 notA(not_a, a);
+not #50 notB(not_b, b);
+not #50 notC(not_c, carryin);
 
-or or0(a_b_c, a, b, carryin);
-or or1(n_a_b_n_c, not_a, b, not_c);
-or or2(n_a_n_b_c, not_a, not_b, carryin);
-or or3(a_n_b_n_c, a, not_b, not_c);
-or or4(b_c, b, carryin);
-or or5(a_b_n_c, a, b, not_c);
-or or6(a_n_b_c, a, not_b, carryin);
+or #50 or0(a_b_c, a, b, carryin);
+or #50 or1(n_a_b_n_c, not_a, b, not_c);
+or #50 or2(n_a_n_b_c, not_a, not_b, carryin);
+or #50 or3(a_n_b_n_c, a, not_b, not_c);
+or #50 or4(b_c, b, carryin);
+or #50 or5(a_b_n_c, a, b, not_c);
+or #50 or6(a_n_b_c, a, not_b, carryin);
 
-and andSum(out, a_b_c, n_a_b_n_c, n_a_n_b_c, a_n_b_n_c);
-and andCarryout(carryout, b_c, a_b_n_c, a_n_b_c);
+and #50 andSum(out, a_b_c, n_a_b_n_c, n_a_n_b_c, a_n_b_n_c);
+and #50 andCarryout(carryout, b_c, a_b_n_c, a_n_b_c);
 
 endmodule
 

@@ -1,9 +1,9 @@
-**
 
-Yuzhong's Homework 2
+
+**Yuzhong's Homework 2**
 -----------
 
-**
+
 
 **Decoder**
 
@@ -24,11 +24,11 @@ The following picture (pic 3) shows the output truth table of the Multiplexor:
 "a", "b" represents two inputs; "Cin", "Cout" represents the carry-in value and carry-out value;  "Sum" shows the sum of the inputs in this digit.
 And "Expected Output" just shows the expected value for "Sum"
 
-![pic 3: testFullAdder.png](https://lh3.googleusercontent.com/-acIfoadhCjk/VgLle6uT27I/AAAAAAAAABM/Oo7YNppm3NQ/s0/testFullAdder.png "testFullAdder.png")
+![pic 3: testFullAdder.png](https://lh3.googleusercontent.com/-laLBjYwJHXU/VgMHL_DUpKI/AAAAAAAAADo/7Im4zlC29uk/s0/testFullAdder.png "testFullAdder.png")
 
 The wave graph (pic 4) generates by the adder shows how do the "Sum" and "Cout" correspond to the inputs. 
 
-![pic 4: ](https://lh3.googleusercontent.com/-Bsj5-t3cLPQ/VgLlnToMZxI/AAAAAAAAABc/SoHDsdbTjJ8/s0/testFullAdder_wave.png "testFullAdder_wave.png")
+![pic 4: testFullAdder_wave.png](https://lh3.googleusercontent.com/-kpdyUI3ci1w/VgMHUPCADmI/AAAAAAAAAD0/O29x8nrXTJo/s0/testFullAdder_wave.png "testFullAdder_wave.png")
 
 **Selector**
 
@@ -36,11 +36,11 @@ A selector which takes one address bit and two inputs and choose only the value 
 The following picture (pic 5) shows the output truth table of the selector:
 "A0" represents the address bit; "I0" to "I1" represents the two inputs value;  "O" shows the output
 
-![pic 5: ](https://lh3.googleusercontent.com/-cZuqxnJpiR8/VgLl_Q0HJsI/AAAAAAAAACM/jPSA3TdJwyQ/s0/testSelector.png "testSelector.png")
+![pic 5: testSelector.png](https://lh3.googleusercontent.com/-cZuqxnJpiR8/VgLl_Q0HJsI/AAAAAAAAACM/jPSA3TdJwyQ/s0/testSelector.png "testSelector.png")
 
 The wave graph (pic 6) generates by the multiplexor shows how do the change of output correspond to that of the inputs. 
 
-![pic 6: ](https://lh3.googleusercontent.com/-noyDSZOjylo/VgLmDjbHdVI/AAAAAAAAACY/bXRhD0cKlC8/s0/testSelector_wave.png "testSelector_wave.png")
+![pic 6: testSelector_wave.png](https://lh3.googleusercontent.com/-noyDSZOjylo/VgLmDjbHdVI/AAAAAAAAACY/bXRhD0cKlC8/s0/testSelector_wave.png "testSelector_wave.png")
 
 **Multiplexor**
 
@@ -53,9 +53,9 @@ The 8 cases I show in the following demonstrates the when address bits are "0, 0
 
 "A0", "A1" represents two addresses; "I0" to "I3" represents the four inputs value;  "O" shows the output
 
-![pic 7: ](https://lh3.googleusercontent.com/-2onP4mYX_jM/VgLl2fpdOgI/AAAAAAAAAB0/c6HRp5Uywmc/s0/testMultiplexer.png "testMultiplexer.png")
+![pic 7: testMultiplexer.png](https://lh3.googleusercontent.com/-2onP4mYX_jM/VgLl2fpdOgI/AAAAAAAAAB0/c6HRp5Uywmc/s0/testMultiplexer.png "testMultiplexer.png")
 
 The wave graph (pic 8) generates by the multiplexor shows how do the change of output correspond to that of the inputs. 
 
-![pic 8: ](https://lh3.googleusercontent.com/-cwDCJVSWAwk/VgLl66amFPI/AAAAAAAAACA/E8YdF1F90pA/s0/testMultiplexer_wave.png "testMultiplexer_wave.png")
+![pic 8: testMultiplexer_wave.png](https://lh3.googleusercontent.com/-cwDCJVSWAwk/VgLl66amFPI/AAAAAAAAACA/E8YdF1F90pA/s0/testMultiplexer_wave.png "testMultiplexer_wave.png")
 
