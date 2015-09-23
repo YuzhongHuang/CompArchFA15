@@ -1,0 +1,251 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/CompArchFA15/HW/HW2
+vbehavioralDecoder
+Z0 !s110 1442862692
+!i10b 1
+!s100 8alK<5@I3331XIEV3o]Ya3
+I>nX^aUGLPHNEoO:9k74Ec2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/comparchFA15/hw/hw2
+Z3 w1442774843
+Z4 8decoder.v
+Z5 Fdecoder.v
+L0 1
+Z6 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z7 !s108 1442862691.000000
+Z8 !s107 adder.v|decoder.v|multiplexer.v|
+Z9 !s90 -reportprogress|300|-work|work|multiplexer.v|decoder.v|adder.v|
+!s101 -O0
+!i113 1
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+nbehavioral@decoder
+vbehavioralFullAdder
+R0
+!i10b 1
+!s100 FUlB0AXTjD;f5`kh[VIJD3
+Io_7CQf=L1Wf@D2D0@DG5^1
+R1
+R2
+Z11 w1442862683
+Z12 8adder.v
+Z13 Fadder.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+nbehavioral@full@adder
+vbehavioralMultiplexer
+R0
+!i10b 1
+!s100 HMZNE268Ih11VR49nMePJ2
+I=>`<WA4SDJ>6GDa^mE[o@1
+R1
+R2
+Z14 w1442860351
+Z15 8multiplexer.v
+Z16 Fmultiplexer.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+nbehavioral@multiplexer
+vselect
+R0
+!i10b 1
+!s100 1Vk7P?QBhD0NCAEk7;Az=0
+I?RZ9eh`NPg`S3^BY`Eo?Z2
+R1
+R2
+R14
+R15
+R16
+L0 10
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vstructuralDecoder
+R0
+!i10b 1
+!s100 ab>]KmEQFB[iT>Z=1TAWW2
+I5H4LlgSFf=PR[@dTd_3TZ3
+R1
+R2
+R3
+R4
+R5
+L0 8
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+nstructural@decoder
+vstructuralFullAdder
+R0
+!i10b 1
+!s100 P9j<RlV2oSQ5]ZH>[C8dQ2
+IgkMmL5HDe3YbceI9511WJ1
+R1
+R2
+R11
+R12
+R13
+L0 7
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+nstructural@full@adder
+vstructuralMultiplexer
+R0
+!i10b 1
+!s100 gUfHiU;QkCMGBBL9[8i5?3
+IM`Zf;Q22z;PK2edo>[>a?1
+R1
+R2
+R14
+R15
+R16
+L0 25
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+nstructural@multiplexer
+vtestDecoder
+R0
+!i10b 1
+!s100 J;_iZb93UCVQX78fzCm?G2
+I=bA0GNbfJ^PdHkZ@V2c7l3
+R1
+R2
+R3
+R4
+R5
+L0 33
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+ntest@decoder
+vtestFullAdder
+R0
+!i10b 1
+!s100 Q;8eJdh9WnBi?Ak7C6QIk3
+IKOE?9O5@FVLS<7SF>8Q=42
+R1
+R2
+R11
+R12
+R13
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+ntest@full@adder
+vtestMultiplexer
+R0
+!i10b 1
+!s100 iOA8@VOOEbC?OB_8Z>haS0
+IUC3hUkb_90cHlDcEK;[TP2
+R1
+R2
+R14
+R15
+R16
+L0 59
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+ntest@multiplexer
+vtestSelector
+R0
+!i10b 1
+!s100 ^RJk7Vlb7M@hCYhgUFM[42
+Ig?SECn1;>fD2^cTV]eX7Y2
+R1
+R2
+R14
+R15
+R16
+L0 38
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+ntest@selector
