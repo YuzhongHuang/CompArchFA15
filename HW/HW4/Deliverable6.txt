@@ -1,0 +1,6 @@
+The decoder1to32 module produce its output by left shifting the one-bit enable
+using operator "<<" by the value of address. So if the enable is "0", 
+the output is just a 32-bit "0"s, which will not enable any register; if 
+the enable is "1", the output would be a 32-bit word with 31 "0"s and 
+one "1" for the register selected, since it's shifted by address of 
+the selected register. 
