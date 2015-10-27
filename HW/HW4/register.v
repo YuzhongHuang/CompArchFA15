@@ -22,7 +22,7 @@ endmodule
 //   Positive edge triggered
 module register32
 (
-	output [31:0] q,
+	output reg [31:0] q,
 	input [31:0] d,
 	input wrenable,
 	input clk
@@ -39,7 +39,7 @@ endmodule
 //   ignore the input
 module register32zero
 (
-	output [31:0] q,
+	output reg [31:0] q,
 	input [31:0] d,
 	input wrenable,
 	input clk

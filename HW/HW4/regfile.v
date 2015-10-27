@@ -21,7 +21,11 @@ input		RegWrite,	// Enable writing of register when High
 input		Clk		// Clock (Positive Edge Triggered)
 );
 
-  wire[31:0] register
+  wire[31:0] register;
+  wire[31:0] regOut0, regOut1, regOut2, regOut3, regOut4, regOut5, regOut6, regOut7, 
+  					 regOut8, regOut9, regOut10, regOut11, regOut12, regOut13, regOut14, regOut15, 
+  					 regOut16, regOut17, regOut18, regOut19, regOut20, regOut21, regOut22, regOut23, 
+  					 regOut24, regOut25, regOut26, regOut27, regOut28, regOut29, regOut30, regOut31;
 
   decoder1to32 decode(register, RegWrite, WriteRegister); 
 

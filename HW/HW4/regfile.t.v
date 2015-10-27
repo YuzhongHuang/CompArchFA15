@@ -3,6 +3,8 @@
 // or broken register files, and verifying that it correctly identifies each
 //------------------------------------------------------------------------------
 
+`include "regfile.v"
+
 module hw4testbenchharness();
 
   wire[31:0]	ReadData1;	// Data from first register read
@@ -51,7 +53,7 @@ module hw4testbenchharness();
     begintest=0;
     #10;
     begintest=1;
-    #1000;
+    #10000;
   end
 
   // Display test results ('dutpassed' signal) once 'endtest' goes high
@@ -138,6 +140,80 @@ output reg		Clk
     $display("Test Case 2 Failed");
   end
 
+  // Test Case 3: 
+  //   Set RegWrite to 0
+  //   Try to write '100' to register 3
+  //   Verify that '100' wasn't stored with Read Ports 1 and 2
+  WriteRegister = 5'd3;
+  WriteData = 32'd100;
+  RegWrite = 0;
+  ReadRegister1 = 5'd3;
+  ReadRegister2 = 5'd3;
+
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 == 100) || (ReadData2 == 100)) begin
+    dutpassed = 0;
+    $display("Test Case 3 Failed");
+  end
+
+  // Test Case 4: 
+  //   Set RegWrite to 1
+  //   Try to write '100' to register 1
+  //   Verify that '100' wasn't stored with Read Ports 1 and 2,
+  //   which stores other register's value
+  WriteRegister = 5'd1;
+  WriteData = 32'd100;
+  RegWrite = 1;
+  ReadRegister1 = 5'd2;
+  ReadRegister2 = 5'd3;
+
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 == 100) || (ReadData2 == 100)) begin
+    dutpassed = 0;
+    $display("Test Case 4 Failed");
+  end
+
+  // Test Case 5: 
+  //   Set RegWrite to 1
+  //   Try to write '100' to register 0
+  //   Verify that '100' wasn't stored with Read Ports 1 and 2
+  WriteRegister = 5'd0;
+  WriteData = 32'd100;
+  RegWrite = 1;
+  ReadRegister1 = 5'd0;
+  ReadRegister2 = 5'd0;
+
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 == 100) || (ReadData2 == 100)) begin
+    dutpassed = 0;
+    $display("Test Case 5 Failed");
+  end
+
+  // Test Case 6: 
+  //   Set RegWrite to 1
+  //   Try to write '2' to register 2 and '17' to register 17
+  //   Verify that '17' wasn't stored wto register 2
+  WriteRegister = 5'd2;
+  WriteData = 32'd2;
+  RegWrite = 1;
+
+  #5 Clk=1; #5 Clk=0;
+
+  WriteRegister = 5'd17;
+  WriteData = 32'd17;
+  RegWrite = 1;
+  ReadRegister1 = 5'd2;
+  ReadRegister2 = 5'd17;
+
+  #5 Clk=1; #5 Clk=0;
+
+  if((ReadData1 === 17000)) begin
+    dutpassed = 0;
+    $display("Test Case 5 Failed");
+  end
 
   // All done!  Wait a moment and signal test completion.
   #5
