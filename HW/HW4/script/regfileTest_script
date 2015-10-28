@@ -1,0 +1,1 @@
+iverilog -o ../compile/regfileTest ../verilog/regfile.t.v ../verilog/regfile.v ../verilog/register.v ../verilog/mux.v ../verilog/decoders.v

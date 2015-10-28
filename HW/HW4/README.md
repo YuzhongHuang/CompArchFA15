@@ -1,3 +1,6 @@
+#To run the executables#
+**All the executable files to run script are in the script folder, and the result will be generated in the complie folder**
+
 # CompArch HW b0100: Register File #
 
 **Due:** Wednesday, October 28 at 5pm

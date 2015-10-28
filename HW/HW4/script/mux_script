@@ -1,0 +1,1 @@
+iverilog -o ../compile/mux ../verilog/mux.v
