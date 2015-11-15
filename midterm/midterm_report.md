@@ -38,13 +38,16 @@ The LED will alternate between the above states in a frequency of 8 HZ.
  
  4. Dim
  
-	 In Dim mode, the LED will produce at approximately 50% brightness. As the graph shown in below.
+	 In Dim mode, the LED will produce at approximately 50% brightness. As the graph shown in below:
+	 
 	 ![enter image description here](https://lh3.googleusercontent.com/-jbIPjkMWOP4/VkVLKf3fMKI/AAAAAAAAAMI/UQZiqt21ADA/s200/dim.png "dim.png")
+	 
 	Pulse width modulation is used to generate dimming. In this bike light controller, we will use 50% duty cycle with a frequency of 32768 HZ, which is faster than the eye can see.
 
 ### FSM
 
 The finite state machine is shown below:
+
 ![enter image description here](https://lh3.googleusercontent.com/-zflZh5_kvGA/VkiUNn2s2EI/AAAAAAAAATg/VVpZwfTMu7o/s0/fsm.png "fsm.png")
 
 As we can see, the FSM contains for states, which corresponding to the four modes. And on each state, when a button is pressed, the FSM will change to the next state.
@@ -65,7 +68,7 @@ The entire control diagram has five major blocks: input conditioner, 4-stage rin
 
  - The D Flip Flop buffers the clock(we cannot send clock directly to the MUX, which will gate the clock). By choosing buffered clock signal as an input to the LED driver, we can get a dimming light with 50% duty cycle in frequency of 32768 HZ. 
 
-
+At the end, a 3-input OR gate OR the three inputs to the LED driver. Among the three inputs, there should only be one signal that is not outputting zero. For the situation where all of them are zero, it just means it's in the "Off" mode.
 
 ## Schematic
 
